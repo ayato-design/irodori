@@ -360,8 +360,8 @@ footer {
     .works_image2 {
         width: 100%;
     }
-    .works_text2 {
-        padding-bottom: 0;
+    .back_works {
+    padding-top: 0;
     }
 
     /* 戻るボタン */
