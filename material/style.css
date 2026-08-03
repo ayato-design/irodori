@@ -1,0 +1,372 @@
+/* リセットCSS */
+@import url('reset.css');
+
+/* GoogleFonts */
+@import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&family=Noto+Sans+JP:wght@100..900&family=Orbitron:wght@400..900&display=swap');
+
+/* Font Awesome */
+@import url('https://use.fontawesome.com/releases/v7.3.0/css/all.css');
+
+/* 全体 */
+body {
+    background: #FFFFFF;
+    color: #000000;
+    font-size: 14px;
+    font-family: "Noto Sans JP", sans-serif;
+}
+p {
+    line-height: 1.5;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom;
+}
+a {
+    color: #000000;
+}
+a:hover {
+    color: #E5E5E5;
+}
+
+/* 戻るボタン */
+.back_button {
+    font-size: 16px;
+    font-family: "Orbitron", sans-serif;
+    text-align: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 20%;
+    background: #FFD54A;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 2;
+    opacity: 0; /* 非表示 */
+    transform: translateY(20px);
+    transition: all .5s ease;
+}
+.back_button a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    transition: all .5s ease;
+}
+.back_button a:hover {
+    opacity: .7;
+}
+.back_button.is-show {
+    opacity: 1; /* 表示 */
+    transform: translateY(0);
+}
+
+/* 共通見出し */
+h2 {
+    font-size: 20px;
+    font-weight: normal;
+    font-family: "Exo", sans-serif;
+    text-decoration: underline;
+}
+h2:first-letter {
+    color: #F5C400;
+}
+h3 {
+    font-weight: normal;
+    position: relative;
+    padding-left: 1.5em;
+}
+
+h3:before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f304";
+    position: absolute;
+    left: 0;
+    top: 10;
+}
+
+/* パンくず */
+.pankuzu ul {
+    font-size: 12px;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 10px;
+}
+.pankuzu ul li {
+    padding-top: 5px;
+}
+.pankuzu ul li::after {
+    content: ">";
+    margin: 0 5px;
+}
+.pankuzu ul li:last-child::after {
+    content: "";
+}
+
+/* ヘッダー */
+.nav_menu {
+    background: #E5E5E5;
+    display: flex;
+    padding: 30px;
+}
+h1 {
+    font-size: 30px;
+    font-weight: normal;
+    font-family: "Exo", sans-serif;
+}
+.site_name a {
+    text-decoration: none;
+}
+.site_name a:hover {
+    color: #FFFFFF;
+}
+.menu {
+    display: flex;
+    align-items: center;
+}
+.menu ul {
+    display: flex;
+    list-style: none;
+    padding-left: 30px;
+}
+.menu ul li::after {
+    content: "/";
+    margin: 0 5px;
+}
+.menu ul li:last-child::after {
+    content: "";
+}
+.menu a:hover {
+    color: #FFFFFF;
+}
+
+/* メイン */
+.top_content {
+    padding: 0 15%;
+}
+.top_name {
+    text-align: center;
+    padding: 30px 0;
+}
+.top_name img {
+    width: 30%;
+    height: 30%;
+}
+.top_name P {
+    padding-top: 10px;
+}
+.new {
+    padding-bottom: 30px;
+}
+.new dl {
+    display: grid;
+    grid-template-columns: max-content auto;
+
+}
+.new dl dt, .new dl dd {
+    border-bottom: 1px solid #000000;
+    padding: 10px 0 10px 10px;
+}
+
+/* About */
+.about {
+    padding-top: 30px;
+}
+/* 画像角丸処理 */
+.about_image img {
+    border-radius: 50%;  /* 角丸半径を50%にする(=円形にする) */
+    width:  200px;       /* ※縦横を同値に */
+    height: 200px;       /* ※縦横を同値に */
+}
+.about_image, .about_text, .about_list, .thanks {
+    padding-top: 10px;
+}
+.about_list ul {
+    list-style: none;
+    padding: 5px 0 20px 0;
+}
+.about_list ul li {
+    position: relative;
+    padding-top: 5px;
+    padding-left: 1rem;
+}
+.about_list ul li::before {
+    position: absolute;
+    left: 0;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: '\f00c';
+    color: #FF0000;
+}
+.thanks ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding-bottom: 30px;
+}
+.thanks ul li {
+    padding-top: 5px;
+}
+.thanks ul li::after {
+    content: "/";
+    margin: 0 5px;
+}
+.thanks ul li:last-child::after {
+    content: "";
+}
+
+/* Works(一覧) */
+.works_title {
+    padding-top: 30px;
+}
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    padding-top: 10px;
+}
+.works_image a:hover {
+    background: #FFFFFF;
+    opacity: 0.7;
+}
+.works_text {
+    padding: 10px 0;
+}
+.tag {
+    display: inline-block;
+    padding: 5px 10px;
+    margin-top: 5px;
+}
+.note {
+    background: #000000;
+    color: #FFFFFF;
+}
+.site {
+    background: #FFD54A;
+}
+.design {
+    background: #db59ff;
+}
+.more {
+    text-align: center;
+    padding: 30px 0;
+}
+#more_button {
+    display: inline-block;
+    width: 30%;
+    border: 1px solid #000000;
+}
+#more_button p {
+    padding: 10px;
+}
+#more_button p:hover {
+    background: #FFD54A;
+    transition: background 1s;
+}
+
+/* Works(個別) */
+.works {
+    display: flex;
+    gap: 30px;
+    padding-top: 30px;
+}
+.works_image2 {
+    text-align: center;
+    width: 50%;
+    height: 50%;
+}
+.works_image2 img {
+    padding-bottom: 10px;
+}
+.tag_group, .works_text2 {
+    padding: 10px 0 20px 0;
+}
+ .works_list {
+    padding-top: 10px;
+}
+.works ul {
+    padding: 5px 0 20px 20px;
+}
+.works ul li {
+    padding-bottom: 5px;
+}
+.back_works {
+    text-align: center;
+    padding: 30px 0;
+}
+.back_link {
+    display: inline-block;
+    width: 30%;
+    border: 1px solid #000000;
+}
+.back_link a {
+    display: block;
+    text-decoration:none;
+    padding: 10px;
+}
+.back_link a:hover {
+    background: #FFD54A;
+    color: #000000;
+    transition: background 1s;
+}
+
+/* フッター */
+footer {
+    background: #FFD54A;
+    color: #000000;
+    font-size: 12px;
+    height: 100px;
+    text-align: center;
+    display: flex;
+    justify-content: center; /* 左右中央 */
+    align-items: center;     /* 上下中央 */
+    line-height: auto;
+}
+
+/* レスポンシブ */
+@media screen and (max-width: 1024px) {
+
+    /* メイン */
+    .top_content {
+        padding: 0 5%;
+    }
+    .top_name img {
+        width: 50%;
+        height: 50%;
+    }
+
+    /* Works(一覧) */
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    /* Works(一覧) */
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+    /* Works(個別) */
+    .works {
+        display: block;
+    }
+    .works_image2 {
+        width: 100%;
+    }
+    .works_text2 {
+        padding-bottom: 0;
+    }
+
+    /* 戻るボタン */
+    .back_button {
+        right: 10px;
+        bottom: 10px;
+    }
+}
