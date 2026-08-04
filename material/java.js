@@ -16,32 +16,25 @@ $(function() {
 
 // 戻るボタン(元：SACOCHAN-DESIGN.COM)
 $(document).ready(function () {
-    const back_button = $('.back_button');
-    const top_content = $('.top_content');
+    const pagetopBtn = $(".back_button");
 
-    if (!back_button.length || !top_content.length) {
-      console.warn('必要な要素が見つかりません');
-      return;
-    }
-    function handleScroll() {
-      const scrollTop = $(window).scrollTop();
-      const windowHeight = $(window).height();
-      const top_contentTop = top_content.offset().top;
+    $(window).on("scroll", function () {
+        if ($(this).scrollTop() > 100) { // 100pxスクロールしたら表示
+            pagetopBtn.addClass("is-show"); // 100px以上スクロールしたらボタンをフェードイン
+        } else {
+            pagetopBtn.removeClass("is-show"); // 100px以下になったらボタンをフェードアウト
+        }
+    });
 
-      // sec02の上端が画面内に入ったら表示
-      if (scrollTop + windowHeight > top_contentTop) {
-        back_button.addClass('is-show');
-      } else {
-        back_button.removeClass('is-show');
-      }
-    }
-    // スクロールイベント（負荷軽減も可）
-    $(window).on('scroll', handleScroll);
-    handleScroll(); // 初回チェック
-  });
+    pagetopBtn.on("click", function () {
+        $("html, body").animate({
+            scrollTop: 0
+        }, 800); //500ミリ秒かけて戻る
+        return false;
+    });
+});
 
   // more(元：Copypet)
-
   $(document).ready(function(){
 //4件ずつ読み込む----------------------------------------------------------//
 	//postの総数をカウントする
