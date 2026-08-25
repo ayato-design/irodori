@@ -157,7 +157,7 @@ h1 {
     width: 30%;
     height: 30%;
 }
-.top_name P {
+.top_name p {
     padding-top: 10px;
 }
 .new {
@@ -239,18 +239,9 @@ h1 {
 }
 .tag {
     display: inline-block;
-    padding: 5px 10px;
+    border: 1px solid #000000;
+    padding: 5px;
     margin-top: 5px;
-}
-.note {
-    background: #000000;
-    color: #FFFFFF;
-}
-.site {
-    background: #FFD54A;
-}
-.design {
-    background: #db59ff;
 }
 .more {
     text-align: center;
