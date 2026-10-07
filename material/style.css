@@ -68,25 +68,63 @@ a:hover {
 h2 {
     font-size: 20px;
     font-weight: normal;
-    font-family: "Exo", "Zen Kaku Gothic Antique", sans-serif;
+    font-family: "Exo", sans-serif;
     text-decoration: underline 1px;
 }
 h2:first-letter {
     color: #F5C400;
 }
-h3 {
-    font-weight: normal;
-    position: relative;
-    padding-left: 1.5em;
-}
 
-h3:before {
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    content: "\f304";
+/* 共通パーツ */
+.top_content {
+    padding: 0 15%;
+}
+.main_content {
+    padding-top: 30px;
+}
+.main_content_end {
+    padding: 30px 0;
+}
+.main_text {
+    padding-top: 10px;
+}
+.checklist {
+    list-style: none;
+    position: relative;
+}
+.checklist li {
+    padding: 0 0 5px 20px;
+}
+.checklist li::before {
     position: absolute;
     left: 0;
-    top: 10;
+    font-family: "FontAwesome";
+    font-weight: 900;
+    content: '\f00c';
+    color: #FF0000;
+}
+.normal_list { /* 斜線横並びリスト */
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+.normal_list li {
+    padding-top: 5px;
+}
+.normal_list li::after {
+    color: #000000;
+    content: "/";
+    margin: 0 5px;
+}
+.normal_list li:last-child::after {
+    content: "";
+}
+.normal_list2 ul { /* リストアイコン有 */
+    padding: 5px 0 20px 20px;
+}
+.normal_list2 li {
+    padding-bottom: 5px;
+    margin-left: 20px;
 }
 
 /* パンくず */
@@ -146,9 +184,6 @@ h1 {
 }
 
 /* メイン */
-.top_content {
-    padding: 0 15%;
-}
 .top_name {
     text-align: center;
     padding: 30px 0;
@@ -174,56 +209,21 @@ h1 {
 }
 
 /* About */
-.about {
-    padding-top: 30px;
-}
 /* 画像角丸処理 */
 .about_image img {
     border-radius: 50%;  /* 角丸半径を50%にする(=円形にする) */
     width:  200px;       /* ※縦横を同値に */
     height: 200px;       /* ※縦横を同値に */
 }
-.about_image, .about_text, .about_list, .thanks {
-    padding-top: 10px;
-}
-.about_list ul {
-    list-style: none;
-    padding: 5px 0 20px 0;
-}
-.about_list ul li {
-    position: relative;
-    padding-top: 5px;
-    padding-left: 1rem;
-}
-.about_list ul li::before {
-    position: absolute;
-    left: 0;
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    content: '\f00c';
-    color: #FF0000;
-}
-.thanks ul {
-    display: flex;
-    flex-wrap: wrap;
-    list-style: none;
-    padding-bottom: 30px;
-}
-.thanks ul li {
-    padding-top: 5px;
-}
-.thanks ul li::after {
-    content: "/";
-    margin: 0 5px;
-}
-.thanks ul li:last-child::after {
-    content: "";
+.about h3, .works h4 { /* About & Works共通 */
+    font-weight: normal;
+    display: inline-block;
+    border: 1px solid #000000;
+    padding: 5px;
+    margin: 5px 0 10px 0;
 }
 
 /* Works(一覧) */
-.works_title {
-    padding-top: 30px;
-}
 .gallery {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -234,12 +234,12 @@ h1 {
     background: #FFFFFF;
     opacity: 0.7;
 }
-.works_text {
-    padding: 10px 0;
-}
 .tag {
+    font-size: 11px;
+    color: #FFFFFF;
+    background: #000000;
     display: inline-block;
-    border: 1px solid #000000;
+    border-radius: 20px;
     padding: 5px;
     margin-top: 5px;
 }
@@ -266,6 +266,23 @@ h1 {
     gap: 30px;
     padding-top: 30px;
 }
+.works h3 { 
+    font-size: 20px;
+    font-weight: normal;
+    font-family: "Exo", sans-serif;
+    position: relative;
+    border-bottom: 1px solid #000000;
+    padding-left: 1.5em;
+    margin-top: -10px;
+}
+.works h3:before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f304";
+    position: absolute;
+    left: 0;
+    top: 10;
+}
 .works_image2 {
     text-align: center;
     width: 50%;
@@ -274,17 +291,8 @@ h1 {
 .works_image2 img {
     padding-bottom: 10px;
 }
-.tag_group, .works_text2 {
-    padding: 10px 0 20px 0;
-}
- .works_list {
-    padding-top: 10px;
-}
-.works ul {
-    padding: 5px 0 20px 20px;
-}
-.works ul li {
-    padding-bottom: 5px;
+.tag_group {
+    padding: 10px 0;
 }
 .back_works {
     text-align: center;
@@ -335,6 +343,11 @@ footer {
     .gallery {
         grid-template-columns: repeat(3, 1fr);
     }
+
+    /* Works(個別) */
+    .works h3 {
+        font-size: 18px;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -348,11 +361,14 @@ footer {
     .works {
         display: block;
     }
+    .works h3 {
+        font-size: 16px;
+    }
     .works_image2 {
         width: 100%;
     }
     .back_works {
-    padding-top: 0;
+        padding-top: 0;
     }
 
     /* 戻るボタン */
