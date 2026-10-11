@@ -126,6 +126,21 @@ h2:first-letter {
     padding-bottom: 5px;
     margin-left: 20px;
 }
+.back_link {
+    display: inline-block;
+    width: 30%;
+    border: 1px solid #000000;
+}
+.back_link a {
+    display: block;
+    text-decoration: none;
+    padding: 10px;
+}
+.back_link a:hover {
+    background: #FFD54A;
+    color: #000000;
+    transition: background 1s;
+}
 
 /* パンくず */
 .pankuzu ul {
@@ -241,7 +256,7 @@ h1 {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 30px;
-    padding: 10px 0 30px 0;
+    padding-top: 10px;
 }
 .works_image a:hover {
     background: #FFFFFF;
@@ -293,21 +308,6 @@ h1 {
 .back_works {
     text-align: center;
     padding: 30px 0;
-}
-.back_link {
-    display: inline-block;
-    width: 30%;
-    border: 1px solid #000000;
-}
-.back_link a {
-    display: block;
-    text-decoration:none;
-    padding: 10px;
-}
-.back_link a:hover {
-    background: #FFD54A;
-    color: #000000;
-    transition: background 1s;
 }
 
 /* フッター */
@@ -374,9 +374,6 @@ footer {
     }
     .works_image2 {
         width: 100%;
-    }
-    .back_works {
-        padding-top: 0;
     }
 
     /* 戻るボタン */
