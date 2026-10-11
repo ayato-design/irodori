@@ -34,23 +34,27 @@ $(document).ready(function () {
     });
 });
 
-  // more(元：Copypet)
-  $(document).ready(function(){
-//4件ずつ読み込む----------------------------------------------------------//
-	//postの総数をカウントする
-	var n = $(".works_list").length;
-	//初期表示5件以上は非表示にする　5→8変更
-	$(".works_list:gt(7)").hide();
-	//初期表示5件 5→4変更
-	var Num = 4;
-	//もっと見るボタンをクリックした時
-	$("#more_button").click(function(){
-		Num += 4;//5件づつ追加する
-		$(".works_list:lt("+Num+")").fadeIn(1000);//Num+5つ目以前を表示
-		//残りのpostの個数が表示件数(Num)より少なくなったら
-		if(n <= Num){
-			$("#more_button").hide();//もっと見るボタンを非表示にする
-		}
-	});
-//4件ずつ読み込む----------------------------------------------------------//
+// Works絞り込み(元：Claude生成)
+document.addEventListener('DOMContentLoaded', () => {
+    const buttons = document.querySelectorAll('.filter_btn');
+    const items = document.querySelectorAll('.works_list');
+
+    buttons.forEach(button => {
+        button.addEventListener('click', () => {
+            const filter = button.dataset.filter;
+
+            // ボタンの見た目切り替え
+            buttons.forEach(b => b.classList.remove('is-active'));
+            button.classList.add('is-active');
+
+            // カードの表示切り替え
+            items.forEach(item => {
+                if (filter === 'all' || item.dataset.category === filter) {
+                    item.classList.remove('is-hidden');
+                } else {
+                    item.classList.add('is-hidden');
+                }
+            });
+        });
+    });
 });
