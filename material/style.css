@@ -233,13 +233,15 @@ h1 {
     padding-top: 10px;
 }
 .filter_btn {
+    color: #000000;
+    background: #FFFFFF;
     min-width: 50px;
     border: 1px solid #FFFFFF;
-    background: #FFFFFF;
     cursor: pointer;
     padding: 3px 10px;
 }
 .filter_btn.is-active {
+    color: #000000;
     background: #FFD54A;
 }
 .gallery {
