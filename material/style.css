@@ -183,27 +183,20 @@ h1 {
     color: #FFFFFF;
 }
 
-/* メイン */
+/* Index */
 .top_name {
     text-align: center;
-    padding: 30px 0;
 }
 .top_name img {
     width: 30%;
     height: 30%;
 }
-.top_name p {
-    padding-top: 10px;
-}
 .new {
-    padding-bottom: 30px;
-}
-.new dl {
     display: grid;
     grid-template-columns: max-content auto;
 
 }
-.new dl dt, .new dl dd {
+.new dt, .new dd {
     border-bottom: 1px solid #000000;
     padding: 10px 0 10px 10px;
 }
@@ -356,13 +349,13 @@ footer {
 @media screen and (max-width: 768px) {
 
     /* Index */
-    .new dl {
+    .new {
         display: block;
     }
-    .new dl dt {
+    .new dt {
     border-bottom: none;
     }
-    .new dl dd {
+    .new dd {
     padding-top: 0;
     }
 
