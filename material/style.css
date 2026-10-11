@@ -355,6 +355,17 @@ footer {
 
 @media screen and (max-width: 768px) {
 
+    /* Index */
+    .new dl {
+        display: block;
+    }
+    .new dl dt {
+    border-bottom: none;
+    }
+    .new dl dd {
+    padding-top: 0;
+    }
+
     /* Works(一覧) */
     .gallery {
         grid-template-columns: repeat(2, 1fr);
