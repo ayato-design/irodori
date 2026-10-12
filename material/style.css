@@ -119,10 +119,20 @@ h2:first-letter {
 .normal_list li:last-child::after {
     content: "";
 }
-.normal_list2 ul { /* リストアイコン有 */
-    padding: 5px 0 20px 20px;
+.normal_list2 { /* 横並びリスト(マークなし) */
+    list-style: none;
+    display: flex;
 }
 .normal_list2 li {
+    padding-left: 3px;
+}
+.normal_list2 li:first-child {
+    padding-left: 0;
+}
+.normal_list3 ul { /* リストアイコン有 */
+    padding: 5px 0 20px 20px;
+}
+.normal_list3 li {
     padding-bottom: 5px;
     margin-left: 20px;
 }
