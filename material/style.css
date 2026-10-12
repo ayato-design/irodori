@@ -377,7 +377,6 @@ footer {
     /* Works(個別) */
     .works {
         display: block;
-        padding-bottom: 30px;
     }
     .works h3 {
         font-size: 16px;
