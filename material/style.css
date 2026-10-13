@@ -216,6 +216,9 @@ h1 {
     width: 30%;
     height: 30%;
 }
+.top_text {
+    font-size: 16px;
+}
 .new {
     display: grid;
     grid-template-columns: max-content auto;
