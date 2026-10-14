@@ -204,9 +204,6 @@ h1 {
 .menu ul li:last-child::after {
     content: "";
 }
-.menu a:hover {
-    color: #FFFFFF;
-}
 
 /* Index */
 .top_name {
