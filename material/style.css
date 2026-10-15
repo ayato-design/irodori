@@ -225,6 +225,9 @@ h1 {
     border-bottom: 1px solid #000000;
     padding: 10px 0 10px 10px;
 }
+.back_works.new_works {
+    padding-bottom: 0;
+}
 .index_profile {
     display: grid;
     grid-template-columns: 30% 70%;
@@ -357,7 +360,7 @@ footer {
     .profile_text {
         padding: 10px 0 0 0;
     }
-    .profile_text>.back_works, .new_works {
+    .profile_text>.back_works {
         padding-bottom: 0;
     }
 
