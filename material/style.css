@@ -357,7 +357,7 @@ footer {
     .profile_text {
         padding: 10px 0 0 0;
     }
-    .profile_text>.back_works {
+    .profile_text>.back_works, .new_works {
         padding-bottom: 0;
     }
 
