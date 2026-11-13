@@ -258,6 +258,7 @@ h1 {
 }
 .filter {
     display: flex;
+    flex-wrap: wrap;
     gap: 5px;
     padding-top: 10px;
 }
