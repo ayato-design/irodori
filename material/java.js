@@ -58,3 +58,12 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+// footer呼び出し(元：Web Drawer)
+function footer(){
+var html = "";
+html += '<footer>';
+html += '<p>© 2026 AYATO All Rights Reserved.</p>';
+html += '</footer>';
+document.write(html);
+}
