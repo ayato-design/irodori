@@ -14,7 +14,7 @@ body {
     font-size: 14px;
     font-family: "Noto Sans JP", sans-serif;
 }
-p {
+p, li {
     line-height: 1.5;
 }
 img {
@@ -93,7 +93,7 @@ h2:first-letter {
     position: relative;
 }
 .checklist li {
-    padding: 0 0 5px 20px;
+    padding-left: 20px;
 }
 .checklist li::before {
     position: absolute;
@@ -108,9 +108,6 @@ h2:first-letter {
     display: flex;
     flex-wrap: wrap;
 }
-.normal_list li {
-    padding-top: 5px;
-}
 .normal_list li::after {
     color: #000000;
     content: "/";
@@ -124,7 +121,7 @@ h2:first-letter {
     display: flex;
 }
 .normal_list2 li {
-    padding-left: 5px;
+    padding-left: 10px;
 }
 .normal_list2 li:first-child {
     padding-left: 0;
@@ -133,7 +130,6 @@ h2:first-letter {
     padding: 5px 0 20px 20px;
 }
 .normal_list3 li {
-    padding-bottom: 5px;
     margin-left: 20px;
 }
 .back_link {
@@ -160,9 +156,6 @@ h2:first-letter {
     flex-wrap: wrap;
     padding-top: 10px;
 }
-.pankuzu ul li {
-    padding-top: 5px;
-}
 .pankuzu ul li::after {
     content: ">";
     margin: 0 5px;
@@ -184,9 +177,6 @@ h1 {
 }
 .site_name a {
     text-decoration: none;
-}
-.site_name a:hover {
-    color: #FFFFFF;
 }
 .menu {
     display: flex;
