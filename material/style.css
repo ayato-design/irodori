@@ -161,6 +161,7 @@ h2:first-letter {
 }
 .accordion summary::before {
     content: '▶';
+    font-size: 12px;
     position: absolute;
     left: 5px;
 }
