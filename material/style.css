@@ -150,6 +150,23 @@ h2:first-letter {
     color: #000000;
     transition: background 1s;
 }
+.accordion summary {
+    font-weight: normal;
+    display: inline-block;
+    position: relative;
+    border: 1px solid #000000;
+    cursor: pointer;
+    padding: 5px 5px 5px 20px;
+    margin: 5px 0 10px 0;
+}
+.accordion summary::before {
+    content: '▶';
+    position: absolute;
+    left: 5px;
+}
+.accordion[open] summary::before {
+    content: '▼';
+}
 
 /* パンくず */
 .pankuzu ul {
