@@ -121,7 +121,7 @@ h2:first-letter {
     display: flex;
 }
 .normal_list2 li {
-    padding-left: 10px;
+    padding-left: 5px;
 }
 .normal_list2 li:first-child {
     padding-left: 0;
@@ -131,6 +131,9 @@ h2:first-letter {
 }
 .normal_list3 li {
     margin-left: 20px;
+}
+.normal_list4 { /* 縦並びリスト(マークなし) */
+    list-style: none;
 }
 .back_link {
     display: inline-block;
