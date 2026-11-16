@@ -157,7 +157,7 @@ h2:first-letter {
     border: 1px solid #000000;
     cursor: pointer;
     padding: 5px 5px 5px 20px;
-    margin: 5px 0 10px 0;
+    margin: 20px 0 10px 0;
 }
 .accordion summary::before {
     content: '▶';
@@ -260,7 +260,7 @@ h1 {
     display: inline-block;
     border: 1px solid #000000;
     padding: 5px;
-    margin: 5px 0 10px 0;
+    margin: 20px 0 10px 0;
 }
 
 /* Works(一覧) */
