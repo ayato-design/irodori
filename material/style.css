@@ -157,7 +157,7 @@ h2:first-letter {
     border: 1px solid #000000;
     cursor: pointer;
     padding: 5px 5px 5px 20px;
-    margin: 20px 0 10px 0;
+    margin: 10px 0;
 }
 .accordion summary::before {
     content: '▶';
@@ -260,7 +260,7 @@ h1 {
     display: inline-block;
     border: 1px solid #000000;
     padding: 5px;
-    margin: 20px 0 10px 0;
+    margin: 10px 0;
 }
 
 /* Works(一覧) */
@@ -318,7 +318,6 @@ h1 {
     position: relative;
     border-bottom: 1px solid #000000;
     padding-left: 1.5em;
-    margin-top: -10px;
 }
 .works h3:before {
     font-family: "Font Awesome 5 Free";
