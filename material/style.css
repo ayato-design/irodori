@@ -263,6 +263,27 @@ h1 {
     margin: 10px 0;
 }
 
+/* News */
+.news {
+    display: grid;
+    grid-template-columns: 20% auto;
+
+}
+.news dt, .news dd {
+    border-bottom: 1px solid #000000;
+    padding: 10px 0 10px 10px;
+}
+.news dt:last-of-type, .news dd:last-of-type {
+    border-bottom: none;
+}
+.news h3 {
+    font-size: 16px;
+    font-weight: normal;
+    border-left: 5px solid #000000;
+    padding-left: 5px;
+    margin: 10px 0;
+}
+
 /* Works(一覧) */
 .works_list.is-hidden {
     display: none;
@@ -393,10 +414,21 @@ footer {
         display: block;
     }
     .new dt {
-    border-bottom: none;
+        border-bottom: none;
     }
     .new dd {
-    padding-top: 0;
+        padding-top: 0;
+    }
+
+    /* News */
+    .news {
+        display: block;
+    }
+    .news dt {
+        border-bottom: none;
+    }
+    .news dd {
+        padding-top: 0;
     }
 
     /* Works(一覧) */
